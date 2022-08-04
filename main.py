@@ -43,7 +43,7 @@ def Open_Data_File_():
     f.close()
     return (val)
 def Open_Data_Json_File():
-    path = "venv/data_json.json"
+    path = "data_json.json"
     with open(path, 'r') as j:
         data = json.loads(j.read())
         return str(data['score'])
