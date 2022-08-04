@@ -32,7 +32,7 @@ def Score(message):
 
     #bot.send_message(message.chat.id, Open_Data_File_())
     score =  Open_Data_Json_File()
-    bot.send_message(message.chat.id, "У тебя " + score + "социальных очков")
+    bot.send_message(message.chat.id, "У тебя " + score + " социальных очков")
 def Open_Data_File_():
     #f = open("data.txt","a")
    # f.write("Now the file has more content")
