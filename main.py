@@ -7,7 +7,7 @@ bot = telebot.TeleBot('5376734562:AAExG2KHFDyrY4AedANB5YcaCV40cRORY0Q')
 @bot.message_handler(commands=['start'])
 def start(message):
     # mess = f'Hi, {message}' -- perfect command to study abilities of message
-    mess = f'Hi, {message.from_user.first_name}'
+    mess = f'Hi, {message.from_user.first_name}! Чтобы общаться со мной - напишите лично мне в чате или создайтк личную переписку со мной.'
     bot.send_message(message.chat.id, mess)
 
 @bot.message_handler()
@@ -20,7 +20,7 @@ def get_user_text(message):
         bot.send_message(message.chat.id, datetime.date.today() )
     if message.text == "Работаешь" or message.text == "работаешь" or message.text == "Работаешь ?" or message.text == "работаешь ?":
         bot.send_message(message.chat.id, "Да! Уже в Работе!")
-    if message.text == "Счет" or message.text == "счет":
+    if message.text == "Счет" or message.text == "счет" or if message.text == "Счёт" or message.text == "счёт":
         Score(message)
 
 
