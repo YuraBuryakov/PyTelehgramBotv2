@@ -44,7 +44,7 @@ def Open_Data_File_():
     return (val)
 def Open_Data_Json_File():
     
-    path = "PyTelehgramBotv2/data_json.json"
+    path = "data_json.json"
     with open(path, 'r') as j:
         data = json.loads(j.read())
         return str(data['score'])
