@@ -20,7 +20,7 @@ def get_user_text(message):
         bot.send_message(message.chat.id, datetime.date.today() )
     if message.text == "Работаешь" or message.text == "работаешь" or message.text == "Работаешь ?" or message.text == "работаешь ?":
         bot.send_message(message.chat.id, "Да! Уже в Работе!")
-    if message.text == "Счет" or message.text == "счет" or if message.text == "Счёт" or message.text == "счёт":
+    if message.text == "Счет" or message.text == "счет" or  message.text == "Счёт" or message.text == "счёт":
         Score(message)
 
 
