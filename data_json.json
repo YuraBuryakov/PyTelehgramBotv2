@@ -1,3 +1,29 @@
 {
-  "score": 0
+    "telegram_user": [
+        {
+            "firstname": "none",
+            "chat_id": 0,
+            "note": "none",
+            "score": 0
+        },
+        {
+            "firstname": "\u0420\u0430\u043d\u0434\u0435\u0432\u0443 \u0441 \u043f\u0443\u043b\u0435\u0439",
+            "chat_id": 914254077,
+            "note": "empty",
+            "score": 0,
+            "password": "ciceronebot"
+        },
+        {
+            "firstname": "PsH3K",
+            "chat_id": -626863377,
+            "note": "empty",
+            "score": 0
+        },
+        {
+            "firstname": "PsH3K",
+            "chat_id": 588529981,
+            "note": "empty",
+            "score": 0
+        }
+    ]
 }
