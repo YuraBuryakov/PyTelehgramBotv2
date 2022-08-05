@@ -3,7 +3,7 @@ import json
 import telebot
 
 bot = telebot.TeleBot('5376734562:AAExG2KHFDyrY4AedANB5YcaCV40cRORY0Q')
-path = "venv/data_json.json"
+path = "data_json.json"
 
 @bot.message_handler(commands=['start'])
 def start(message):
