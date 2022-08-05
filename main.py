@@ -8,7 +8,7 @@ path = "data_json.json"
 @bot.message_handler(commands=['start'])
 def start(message):
     # mess = f'Hi, {message}' -- perfect command to study abilities of message
-    mess = f'Hi, {message.from_user.first_name}! Чтобы общаться со мной - напишите лично мне в чате или создайтк личную переписку со мной.'
+    mess = f'Hi, {message.from_user.first_name}! Чтобы общаться со мной - напишите лично мне в чате или создайте личную переписку со мной.'
     bot.send_message(message.chat.id, mess)
     #add a new telegram user into json file
     def write_json(data, filename = path):
