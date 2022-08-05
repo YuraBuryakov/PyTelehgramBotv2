@@ -7,7 +7,7 @@ bot = telebot.TeleBot('5376734562:AAExG2KHFDyrY4AedANB5YcaCV40cRORY0Q')
 @bot.message_handler(commands=['start'])
 def start(message):
     # mess = f'Hi, {message}' -- perfect command to study abilities of message
-    mess = f'Hi, {message.from_user.first_name}! Чтобы общаться со мной - напишите лично мне в чате или создайтк личную переписку со мной.'
+    mess = f'Hi, {message.from_user.first_name}! Чтобы общаться со мной - напишите лично мне в чате или создайте личную переписку со мной.'
     bot.send_message(message.chat.id, mess)
 
 @bot.message_handler()
