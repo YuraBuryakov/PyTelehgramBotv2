@@ -54,7 +54,9 @@ def get_user_text(message):
     if message.text == "Плюс очко":
         bot.send_message(message.chat.id, "Плюс один к социальным очкам// Right now it does not work due possibility of GitHub(Write in Json)")
         Replace_In_Json("score", message.chat.id)
-
+    if message.text == "Прачка":
+        bot.send_message(message.chat.id, "Прачка")
+        
 # send a telegram users' score
 def Score(message):
     score = Get_Data_From_Json("score",message.chat.id)
@@ -82,9 +84,11 @@ def List_Of_Commands():
     mess = "Команды \n" \
             "На данный момент я способен отзываться на такие команды:\n" \
             " - /start\n" \
+            " - Прачка \n" \
            " - Работаешь\n" \
            " - Счет\n" \
-           " - Плюс очко \n "
+           " - Плюс очко \n " 
+            " - Прачка \n" \
     return mess
 
 #Replace data in json
