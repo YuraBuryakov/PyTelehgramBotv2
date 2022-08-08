@@ -51,7 +51,9 @@ def get_user_text(message):
         bot.send_message(message.chat.id, "Please enter a password/ Пожалуйста, введите пароль")
         if message.text == "cicerone":
             bot.send_message(message.chat.id, "Hi, Admin")
-
+    if message.text == "Плюс очко":
+        bot.send_message(message.chat.id, "Плюс один к социальным очкам")
+        Replace_In_Json("score", message.chat.id)
 
 # send a telegram users' score
 def Score(message):
@@ -82,8 +84,25 @@ def List_Of_Commands():
             " - /start\n" \
            " - Работаешь\n" \
            " - Счет\n" \
-           ""
+           " - Плюс очко \n "
     return mess
+
+#Replace data in json
+def Replace_In_Json(key, message):
+        temp = Open_Json_File_Read()
+        count = 0
+        for item in temp:
+            if item["chat_id"] == message.chat.id:
+                temp[count][key] += 1
+                write_json(temp)
+            else:
+                count += 1
+
+#Change tne value or add new in json
+def write_json(data, filename=path):
+    with open(filename, "w") as f:
+        json.dump(data, f, indent=4)
+
 
 # funciton which use a word "stop" to stop every command in a chat
 
