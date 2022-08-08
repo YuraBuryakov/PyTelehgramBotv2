@@ -2,6 +2,9 @@ import datetime
 import json
 import telebot
 
+import requests
+from bs4 import BeautifulSoup
+
 bot = telebot.TeleBot('5376734562:AAExG2KHFDyrY4AedANB5YcaCV40cRORY0Q')
 path = "data_json.json"
 
@@ -55,7 +58,7 @@ def get_user_text(message):
         bot.send_message(message.chat.id, "Плюс один к социальным очкам// Right now it does not work due possibility of GitHub(Write in Json)")
         Replace_In_Json("score", message.chat.id)
     if message.text == "Прачка" or message.text == "прачка":
-        bot.send_message(message.chat.id, "Прачка")
+        bot.send_message(message.chat.id, Washing_Machine_Status())
         
 # send a telegram users' score
 def Score(message):
@@ -108,7 +111,17 @@ def write_json(data, filename=path):
         json.dump(data, f, indent=4)
 
 
-# funciton which use a word "stop" to stop every command in a chat
+#*******washing machine********
+def Washing_Machine_Status():
+    url_washing_machine = "https://hk.cvut.cz/en/about-us/"
+    req = requests.get(url=url_washing_machine)
+    src = req.text
+    soup = BeautifulSoup(src,"lxml")
+    machines = soup.find("aside", class_ = "widget widget_xyz_insert_php_widget").findAll("li")
+    mess = ""
+    for item in machines:
+        mess = mess + item.text + "\n"
+    return mess
 
 bot.polling(none_stop=True)
 
