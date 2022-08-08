@@ -52,7 +52,7 @@ def get_user_text(message):
         if message.text == "cicerone":
             bot.send_message(message.chat.id, "Hi, Admin")
     if message.text == "Плюс очко":
-        bot.send_message(message.chat.id, "Плюс один к социальным очкам")
+        bot.send_message(message.chat.id, "Плюс один к социальным очкам// Right now it does not work due possibility of GitHub(Write in Json)")
         Replace_In_Json("score", message.chat.id)
 
 # send a telegram users' score
