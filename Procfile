@@ -1,2 +1,2 @@
-worker: python main.py, lawyer.py
+worker: python main.py
 
