@@ -18,8 +18,8 @@ path = "data_json.json"
 @bot.message_handler(commands=['start'])
 def start(message):
     keyboard_start = InlineKeyboardMarkup()
-    washing_machine_button = InlineKeyboardButton(text="Pracka", callback_data="washing_machine_callback")
-    do_you_work_button = InlineKeyboardButton(text="Are you working?", callback_data="do_you_work_button_callback")
+    washing_machine_button = InlineKeyboardButton(text="🧐 Pracka", callback_data="washing_machine_callback")
+    do_you_work_button = InlineKeyboardButton(text="🙄 Are you working?", callback_data="do_you_work_button_callback")
     keyboard_start.add(washing_machine_button)
     keyboard_start.add(do_you_work_button)
 
